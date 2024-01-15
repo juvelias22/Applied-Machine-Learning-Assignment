@@ -1,25 +1,52 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Interactive Model</title>
-    <style>
-        /* Add your CSS styles here */
-    </style>
+    <title>Civilian Complaint Assessment</title>
+    <h1 style="text-align: center;">Civilian Complaint Assessment using CatBoost, <br> K-Nearest Neighbor & Logistic Regression</h1>
     <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
     <!-- Include other JavaScript libraries here -->
 </head>
 <body>
-     <H1> aaaaa </H1>
-   <iframe
-	src="https://juvelias-catboost-allegations-demo.hf.space"
-	frameborder="0"
-	width="850"
-	height="450"
-></iframe>
+    <!-- CatBoost Model - Elias -->
+    <div class="differentModel">
+        <h1> CatBoost Model - Elias Cajal </h1>
+        <p class="modelDescription">1) Start by selecting the duration in months of the complant. <br> 2) Check the corresponding checkbox if the member of service or the complainant is male. <br> 3) Select the ethnicites of the complainant and the member of serves using their respective dropdown menus. <br>4) select one of the availabe FADO type allegation.</p>
+        <iframe style="margin: auto;" src="https://juvelias-catboost-allegations-demo.hf.space" frameborder="0" width="1200" height="700"></iframe>
+    </div>
 
-    <H1> aaaaa </H1>
-   <iframe src="https://74eb9f19b561f42aa1.gradio.live/"  width="100%" height="500px" style="border:none;" title="ArrestPredictor"></iframe>
-     <H1> aaaaa </H1>
-   <iframe src="https://74eb9f19b561f42aa1.gradio.live/"  width="100%" height="500px" style="border:none;" title="ArrestPredictor"></iframe>
+    <!-- KNN - Shaun -->
+    <div class="differentModel">
+        <h1> K-Nearest Neighbors - Shaun Tonna</h1>
+        <p class="modelDescription">1) Start by selecting the duration in months of the complant. <br> 2) Select an allegation type by specifying the value representing that allegation. The values for the allegations are as follow: <br> 0: Abuse of Authority&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1: Discourtesy&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2: Force&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3: Offensive Language</p>
+        <iframe style="margin: auto;" src="https://riskman-k-nn-allegations-demo.hf.space" frameborder="0" width="1200" height="500"></iframe>
+    </div>
+        
+    <!-- Logistoc Regression Model - Isaac -->
+    <div class="differentModel">
+        <h1> Logistic Regression Model - Isaac Montebello</h1>
+        <p class="modelDescription">1) Start by selecting an ethnicity from the available options from the two dropdown menus, which refer to the complainant and the defendant ethniciteis. <br>2) After that, choose one type of allegation by checking the respective checkbox. <br>3) Finally, use the slider to change the duration of the allegation.</p>
+        <iframe style="margin: auto;" src="https://montebello-642-logistic-resression.hf.space" frameborder="0" width="1200" height="700"></iframe>
+    </div>
 </body>
 </html>
+
+<style>
+    body{
+        font-family: "Gill Sans", sans-serif;
+        background-color: aliceblue;
+    }
+
+    .differentModel{
+        background-color: white;
+        text-align: center;
+        margin-bottom: 10vh;
+        display: flex;
+        flex-direction: column;
+        height: 900px;
+    }
+
+    .modelDescription{
+        margin: 0 20vw;
+        text-align: left;
+    }
+</style>
